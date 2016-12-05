@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum HTTPMethod : String {
+    case DELETE
+    case GET
+    case PUT
+    case POST
+}
