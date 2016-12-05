@@ -14,3 +14,16 @@ enum HTTPMethod : String {
     case PUT
     case POST
 }
+
+public enum Result<T> {
+    case success(T)
+    case failure(Error)
+    
+    public init(value: T) {
+        self = .success(value)
+    }
+    
+    public init(error: Error) {
+        self = .failure(error)
+    }
+}
