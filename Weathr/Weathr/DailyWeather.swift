@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+struct DailyWeather {
+        
+        var data: NSArray?
+
+        init(infoObj : [String:Any], adapter:Adapter) {
+            
+            self.adapter = adapter
+            
+            if let data = infoObj["data"] as? NSArray {
+                self.data = data
+            }
+        }
+
+}
+    
